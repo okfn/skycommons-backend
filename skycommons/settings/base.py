@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     "home",
     "search",
     "observatory",
+    "wagtail.api.v2",
+    "rest_framework",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
@@ -159,6 +161,12 @@ STORAGES = {
 # can exceed this limit within Wagtail's page editor.
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000
 
+
+# DRF: read-only content API defaults
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 50,
+}
 
 # Public site this backend feeds (linked from the backend home page)
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "https://skycommons.okfn.org/")

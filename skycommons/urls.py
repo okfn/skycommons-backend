@@ -8,11 +8,18 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 
+from observatory.api import router as observatory_api_router
+from .api import api_router
+
 urlpatterns = [
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
+    # Standard APIs: Wagtail API v2 (pages/images/documents) and plain DRF
+    # for the observatory content models.
+    path("api/v2/", api_router.urls),
+    path("api/", include(observatory_api_router.urls)),
     # Frontend compatibility layer: same URLs/formats as the static files
     # the SvelteKit app consumes today (see observatory/urls.py).
     path("", include("observatory.urls")),
