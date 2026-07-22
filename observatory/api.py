@@ -13,9 +13,8 @@ from .models import (
     ContentSectionCTA,
     Country,
     MapCountryName,
-    MarketProvider,
-    PolicyLever,
-    RedFlag,
+    ResearchDimension,
+    ResearchIndicator,
     TimelineEntry,
 )
 
@@ -34,35 +33,29 @@ class ContentSectionSerializer(serializers.ModelSerializer):
         fields = ["id", "slug", "section_label", "title", "subline", "text", "ctas"]
 
 
+class ResearchIndicatorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ResearchIndicator
+        fields = ["name", "info"]
+
+
+class ResearchDimensionSerializer(serializers.ModelSerializer):
+    indicators = ResearchIndicatorSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = ResearchDimension
+        fields = ["name", "risk", "text", "indicators"]
+
+
 class TimelineEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = TimelineEntry
         fields = ["provider", "info", "date", "category"]
 
 
-class MarketProviderSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MarketProvider
-        fields = ["name", "local_entity", "status"]
-
-
-class RedFlagSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RedFlag
-        fields = ["severity", "text"]
-
-
-class PolicyLeverSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PolicyLever
-        fields = ["text"]
-
-
 class CountrySerializer(serializers.ModelSerializer):
+    research_dimensions = ResearchDimensionSerializer(many=True, read_only=True)
     timeline_entries = TimelineEntrySerializer(many=True, read_only=True)
-    market_providers = MarketProviderSerializer(many=True, read_only=True)
-    red_flags = RedFlagSerializer(many=True, read_only=True)
-    policy_levers = PolicyLeverSerializer(many=True, read_only=True)
 
     class Meta:
         model = Country
@@ -76,10 +69,11 @@ class CountryListSerializer(serializers.ModelSerializer):
             "id",
             "slug",
             "name",
+            "active",
             "iso_code",
             "region",
             "report_date",
-            "risk_level",
+            "risk",
         ]
 
 
@@ -97,7 +91,7 @@ class ContentSectionViewSet(viewsets.ReadOnlyModelViewSet):
 
 class CountryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Country.objects.prefetch_related(
-        "timeline_entries", "market_providers", "red_flags", "policy_levers"
+        "research_dimensions__indicators", "timeline_entries"
     )
     lookup_field = "slug"
 

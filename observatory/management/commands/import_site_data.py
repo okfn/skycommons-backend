@@ -1,12 +1,14 @@
 """Import the current static site JSON into the CMS models.
 
 Reads content/*.json and data/*.json from the sky-commons static build
-(../sky-commons/docs by default) and creates/updates the corresponding
-records. Idempotent: re-running overwrites fields and recreates child rows,
-so it is safe as a reset-to-site-state, but it will clobber CMS edits.
+(../sky-commons/docs by default; override with --source or the
+SKY_COMMONS_DOCS env var) and creates/updates the corresponding records.
+Idempotent: re-running overwrites fields and recreates child rows, so it is
+safe as a reset-to-site-state, but it will clobber CMS edits.
 """
 
 import json
+import os
 from pathlib import Path
 
 from django.conf import settings
@@ -19,13 +21,16 @@ from observatory.models import (
     ContentSectionCTA,
     Country,
     MapCountryName,
-    MarketProvider,
-    PolicyLever,
-    RedFlag,
+    ResearchDimension,
+    ResearchIndicator,
     TimelineEntry,
 )
 
-DEFAULT_SOURCE = Path(settings.BASE_DIR).parent / "sky-commons" / "docs"
+DEFAULT_SOURCE = Path(
+    os.environ.get(
+        "SKY_COMMONS_DOCS", Path(settings.BASE_DIR).parent / "sky-commons" / "docs"
+    )
+)
 
 
 class Command(BaseCommand):
@@ -79,78 +84,63 @@ class Command(BaseCommand):
 
     def import_countries(self, source):
         for path in sorted((source / "data").glob("country-*.json")):
-            d = self.load(source, f"data/{path.name}")
-            ca = d["comparative_analysis"]
-            ms = d["market_structure"]
-            gs = d["governance_scorecard"]
-            country, _ = Country.objects.update_or_create(
-                slug=d["id"],
-                defaults={
-                    "name": d["name"],
-                    "iso_code": d["iso_code"],
-                    "region": d["region"],
-                    "report_date": d["report_date"],
-                    "risk_level": d["risk_level"],
-                    "providers_authorized": d["providers"]["authorized"],
-                    "providers_operational": d["providers"]["operational"],
-                    "card_title": d["card_title"],
-                    "card_blurb": d["card_blurb"],
-                    "header_info": d["header_info"],
-                    "key_finding": d["key_finding"],
-                    "primary_driver_label": ca["primary_driver"]["label"],
-                    "primary_driver_description": ca["primary_driver"]["description"],
-                    "local_presence_label": ca["local_presence"]["label"],
-                    "local_presence_description": ca["local_presence"]["description"],
-                    "competition_label": ca["competition"]["label"],
-                    "competition_description": ca["competition"]["description"],
-                    "key_gap_label": ca["key_gap"]["label"],
-                    "key_gap_description": ca["key_gap"]["description"],
-                    "quote": d["quote"],
-                    "quote_attribution": d["quote_attribution"],
-                    "summary": d["summary"],
-                    "licensing_pathway": ms["licensing_pathway"],
-                    "licensing_pathway_note": ms["licensing_pathway_note"],
-                    "uso_rollout": ms.get("uso_rollout", ""),
-                    "qos_obligations": gs["qos_obligations"],
-                    "outage_reporting_required": gs["outage_reporting_required"],
-                    "local_data_landing_mandate": gs["local_data_landing_mandate"],
-                    "local_partner_requirement": gs["local_partner_requirement"],
-                    "foreign_ownership_exception": gs["foreign_ownership_exception"],
-                    "public_consultation": gs["public_consultation"],
-                    "cybersecurity_audit": gs["cybersecurity_audit"],
-                    "scorecard_summary_note": gs["summary_note"],
-                },
-            )
-            country.timeline_entries.all().delete()
-            for i, t in enumerate(d["timeline"]):
-                TimelineEntry.objects.create(
-                    country=country,
-                    sort_order=i,
-                    provider=t["provider"],
-                    info=t["info"],
-                    date=t["date"],
-                    category=t["category"],
+            try:
+                d = self.load(source, f"data/{path.name}")
+                country, _ = Country.objects.update_or_create(
+                    slug=d["id"],
+                    defaults={
+                        "name": d["name"],
+                        "active": d["active"],
+                        "iso_code": d["iso_code"],
+                        "region": d["region"],
+                        "report_date": d["report_date"],
+                        "risk": d["risk"],
+                        "providers_authorized": d["providers"]["authorized"],
+                        "providers_operational": d["providers"]["operational"],
+                        "population": d["population"],
+                        "card_title": d["card_title"],
+                        "card_blurb": d["card_blurb"],
+                        "header_info": d["header_info"],
+                        "key_finding": d["key_finding"],
+                        "summary": d["summary"],
+                        "primary_driver": d["primary_driver"],
+                    },
                 )
-            country.market_providers.all().delete()
-            for i, p in enumerate(ms["providers"]):
-                MarketProvider.objects.create(
-                    country=country,
-                    sort_order=i,
-                    name=p["name"],
-                    local_entity=p["local_entity"],
-                    status=p["status"],
+                country.research_dimensions.all().delete()
+                for i, r in enumerate(d["research"]):
+                    dimension = ResearchDimension.objects.create(
+                        country=country,
+                        sort_order=i,
+                        name=r["name"],
+                        risk=r["risk"],
+                        text=r["text"],
+                    )
+                    for j, ind in enumerate(r.get("indicators", [])):
+                        ResearchIndicator.objects.create(
+                            dimension=dimension,
+                            sort_order=j,
+                            name=ind.get("name", ""),
+                            info=ind["info"],
+                        )
+                country.timeline_entries.all().delete()
+                for i, t in enumerate(d["timeline"]):
+                    TimelineEntry.objects.create(
+                        country=country,
+                        sort_order=i,
+                        provider=t["provider"],
+                        info=t["info"],
+                        date=t["date"],
+                        category=t["category"],
+                    )
+            except KeyError as e:
+                raise CommandError(
+                    f"{path.name}: missing key {e} - the file format may have "
+                    "changed; update the models/importer to match the current "
+                    "frontend data schema."
                 )
-            country.red_flags.all().delete()
-            for i, r in enumerate(d["red_flags"]):
-                RedFlag.objects.create(
-                    country=country, sort_order=i, severity=r["severity"], text=r["text"]
-                )
-            country.policy_levers.all().delete()
-            for i, text in enumerate(d["policy_levers"]):
-                PolicyLever.objects.create(country=country, sort_order=i, text=text)
             self.stdout.write(
-                f"country {d['id']}: ok ({len(d['timeline'])} timeline, "
-                f"{len(ms['providers'])} providers, {len(d['red_flags'])} red flags)"
+                f"country {d['id']}: ok ({len(d['research'])} research, "
+                f"{len(d['timeline'])} timeline)"
             )
 
     def import_map_names(self, source):

@@ -1,0 +1,2746 @@
+[
+{
+  "model": "observatory.contentsection",
+  "pk": 1,
+  "fields": {
+    "slug": "header",
+    "section_label": "SkyCommons Observatory | Space belongs to everyone",
+    "title": "Who controls satellite internet?",
+    "subline": "",
+    "text": "We’re tracking who profits from connectivity in space and who gets left behind."
+  }
+},
+{
+  "model": "observatory.contentsection",
+  "pk": 2,
+  "fields": {
+    "slug": "introduction",
+    "section_label": "",
+    "title": "A few companies control everything. One dominates.",
+    "subline": "",
+    "text": "Around the world, governments are striking deals with satellite internet providers with little to no oversight. Mostly, it’s with Starlink."
+  }
+},
+{
+  "model": "observatory.contentsection",
+  "pk": 3,
+  "fields": {
+    "slug": "countries",
+    "section_label": "Research",
+    "title": "Mapping power, exposing risks",
+    "subline": "We did a baseline study of how low-Earth orbit (LEO) satellite internet was rolled out in six countries and scored them on key public-interest principles, including governance and accountability.",
+    "text": "Local researchers in each country collected data about the markets and politics surrounding the introduction of LEO satellite services. Each country represents a distinct social and geographic context, including conflict, high and low internet connectivity."
+  }
+},
+{
+  "model": "observatory.contentsection",
+  "pk": 4,
+  "fields": {
+    "slug": "satellite",
+    "section_label": "Top Companies",
+    "title": "Satellite internet providers",
+    "subline": "",
+    "text": "Five companies are especially visible in space, but one dominates above all others: Starlink, owned by SpaceX."
+  }
+},
+{
+  "model": "observatory.contentsection",
+  "pk": 5,
+  "fields": {
+    "slug": "information",
+    "section_label": "",
+    "title": "Who are we?",
+    "subline": "",
+    "text": "SkyCommons Observatory is a ‘Frontiers of Openness’ initiative of the <a href='https://okfn.org/' target='_blank'>Open Knowledge Foundation</a> to map power, expose risks, and advance public-interest principles, such as openness, interoperability, and accountability into the technical and legal frameworks that govern our common skies—starting with LEO satellite infrastructure. Our aim is to expand this prototype into a permanent global monitoring node that serves as a shared platform for data and research curation, coordination, and advocacy."
+  }
+},
+{
+  "model": "observatory.contentsection",
+  "pk": 6,
+  "fields": {
+    "slug": "observations",
+    "section_label": "Observations",
+    "title": "What we observed across all six countries",
+    "subline": "",
+    "text": "In all six countries, the infrastructure arrived faster than the governance. Multiple providers are authorized, but Starlink is the dominant provider in practice.<br/><br/>No country had an LEO licensing regime before Starlink’s application. Every country hastily adapted frameworks designed for terrestrial telecoms or geostationary satellites.<br/><br/>Entry conditions were ambiguous, and gaps that became visible only after operators were established and alternatives were limited. <br/><br/>LEO connectivity is promoted as a digital inclusion tool, but the cost of hardware and subscriptions significantly exceeds what low-income and rural households can afford without subsidy.<br/><br/>  None of the six countries built accountability systems that matched the scale or pace of that authorization. Across all six countries, governance processes lacked meaningful consultation, transparency, and accountability.<br/><br/>Consumer protection mechanisms for LEO satellite services are either nonexistent or not specifically adapted to the sector's characteristics. "
+  }
+},
+{
+  "model": "observatory.contentsectioncta",
+  "pk": 11,
+  "fields": {
+    "sort_order": 0,
+    "section": 1,
+    "title": "Explore satellites",
+    "link": "/satellites"
+  }
+},
+{
+  "model": "observatory.contentsectioncta",
+  "pk": 12,
+  "fields": {
+    "sort_order": 0,
+    "section": 3,
+    "title": "Explore the research",
+    "link": "/countries"
+  }
+},
+{
+  "model": "observatory.contentsectioncta",
+  "pk": 13,
+  "fields": {
+    "sort_order": 0,
+    "section": 4,
+    "title": "Explore satellites",
+    "link": "/satellites"
+  }
+},
+{
+  "model": "observatory.contentsectioncta",
+  "pk": 14,
+  "fields": {
+    "sort_order": 0,
+    "section": 5,
+    "title": "About this project",
+    "link": "/about"
+  }
+},
+{
+  "model": "observatory.contentsectioncta",
+  "pk": 15,
+  "fields": {
+    "sort_order": 0,
+    "section": 6,
+    "title": "Explore the research",
+    "link": "/research"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 1,
+  "fields": {
+    "slug": "brazil",
+    "name": "Brazil",
+    "active": true,
+    "iso_code": "BR",
+    "region": "Americas",
+    "report_date": "March 2026",
+    "risk": "high",
+    "providers_authorized": 5,
+    "providers_operational": 2,
+    "population": "213.7 million",
+    "card_title": "Some connectivity gaps are being closed.",
+    "card_blurb": "Starlink is the dominant provider, shaped by executive lobbying and direct deals. Lack of accountability is a civil society concern, as is what data is collected about the Amazon region and beyond.",
+    "header_info": "Population: 213 million · 1 million Starlink subscribers",
+    "key_finding": "R$102,677 in licensing fees for rights worth billions — less than R$5 per satellite per year",
+    "summary": "Brazil is Starlink's second-largest market globally. Five LEO satellite providers are authorised to operate in the country, but only one—Starlink—operates at mass consumer scale. There is also high dependency on Starlink to connect remote areas in the Amazon region. Its authorisation in 2022 was shaped by executive-level lobbying rather than an arm's-length regulatory process. Since then, there have been moments of political friction with the company’s founder, Elon Musk—notably in 2024, when Brazil’s supreme court ordered the suspension of another Musk company, X (formerly Twitter) and he threatened to defy the order. In April 2025, the National Telecommunications Agency (Anatel) approved the further expansion of Starlink to 11,908 satellites on the same day as it also issued a regulatory alert for market concentration and gaps in space sustainability and digital sovereignty.",
+    "primary_driver": "Executive Lobbying"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 2,
+  "fields": {
+    "slug": "fiji",
+    "name": "Fiji",
+    "active": false,
+    "iso_code": "FJ",
+    "region": "Pacific",
+    "report_date": "2026",
+    "risk": "high",
+    "providers_authorized": 1,
+    "providers_operational": 1,
+    "population": "0.9 million",
+    "card_title": "A disaster-resilience measure.",
+    "card_blurb": " Starlink is the only licensed and operational LEO provider in Fiji, bringing telemedicine and online schooling to outer island communities, but with virtually no transparency or accountability.",
+    "header_info": "332 islands · 1.3 million km² of ocean · 1 LEO provider licensed",
+    "key_finding": "126 public USO sites connected — but zero quality-of-service or outage reporting obligations imposed on the provider",
+    "summary": "For Fiji's 332-island archipelago — spread across 1.3 million km² of ocean — LEO connectivity is a structural necessity, not a market choice. Submarine cable vulnerabilities have made satellite internet a lifeline for disaster resilience. Starlink, registered locally as Starlink Fiji Pte Limited, received commercial and spectrum licenses on 29 November 2023, with official service launching across 300+ islands on 20 May 2024. Phase 1 covers 126 USO sites across Lau, Kadavu, and Namosi, targeting 111,300 remote Fijians — a leap from just 124 satellite subscriptions nationally in 2020. Early evidence shows benefits in education, telemedicine, and emergency communications. Yet access was granted with no public consultation, no QoS obligations, no outage reporting, and no binding coverage mandates.",
+    "primary_driver": "Disaster Resilience"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 3,
+  "fields": {
+    "slug": "indonesia",
+    "name": "Indonesia",
+    "active": false,
+    "iso_code": "ID",
+    "region": "Asia-Pacific",
+    "report_date": "2026",
+    "risk": "high",
+    "providers_authorized": 3,
+    "providers_operational": 3,
+    "population": "288.1 million",
+    "card_title": "Investigated for unfair competition.",
+    "card_blurb": "A nation of 17,508 islands, the case for LEO connectivity is strong, but with Starlink as the only provider authorised to service consumers, concerns of monopolistic practices run high.",
+    "header_info": "3 providers operational · 80.5% internet penetration · 12,548 villages remain blank spots",
+    "key_finding": "Starlink licensed in urban markets where connectivity already exists — while 12,548 villages remain blank spots",
+    "summary": "Indonesia licensed Starlink as a VSAT provider and ISP in May 2024 following direct lobbying by then-President Joko Widodo — a process widely described as 'red carpet' treatment. With 80.5% internet penetration across ~230 million users, Indonesia has real connectivity but acute rural gaps: 12,548 villages remain signal blank spots, mostly in 3T (remote/frontier/outermost) regions. Rather than concentrating on these underserved areas, Starlink has entered urban markets, alarming local ISPs who fear predatory pricing. The government-owned SATRIA-1 (150 Gbps capacity) exists as a parallel infrastructure, but no coordination framework between national and commercial LEO systems has been established. LEO accounts for just 1.05% of fixed broadband subscriptions in 2025.",
+    "primary_driver": "Executive Lobbying"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 4,
+  "fields": {
+    "slug": "malaysia",
+    "name": "Malaysia",
+    "active": false,
+    "iso_code": "MY",
+    "region": "Asia-Pacific",
+    "report_date": "2026",
+    "risk": "moderate",
+    "providers_authorized": 3,
+    "providers_operational": 2,
+    "population": "36.4 million",
+    "card_title": "Limited consumer choice.",
+    "card_blurb": " Rural connectivity gaps are significant, but hardware costs are steep for people in these regions. Starlink is the only provider to consumers, and the terms of their license are not public.",
+    "header_info": "3 providers authorized · 98% internet penetration · 100% foreign ownership granted to Starlink",
+    "key_finding": "100% foreign ownership granted to Starlink — the only company exempted from Malaysia's 49% equity cap for telecoms",
+    "summary": "Malaysia presents the starkest case of regulatory exception among the studied countries. Starlink was licensed in July 2023 following a direct video call between Prime Minister Anwar Ibrahim and Elon Musk — and was granted 100% foreign ownership, bypassing the standard 49% equity cap applied to all other foreign telecoms operators. With 98% internet penetration, Malaysia's headline connectivity figures are strong. Yet only 46.7% of households have fixed broadband, and the complete absence of a unified framework for privacy, cybersecurity, and cross-border data governance leaves the country structurally exposed. Local player Angkasa-X launched its first LEO satellite in June 2023, but remains operationally limited. The government has simultaneously ordered 40 Starlink devices for immediate deployment in schools and universities.",
+    "primary_driver": "Economic Investment"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 5,
+  "fields": {
+    "slug": "nigeria",
+    "name": "Nigeria",
+    "active": false,
+    "iso_code": "NG",
+    "region": "Africa",
+    "report_date": "2026",
+    "risk": "moderate",
+    "providers_authorized": 5,
+    "providers_operational": 2,
+    "population": "242.7 million",
+    "card_title": "An infrastructure shortcut.",
+    "card_blurb": " LEO satellites reach communities that terrestrial networks cannot. Nigeria has authorized five LEO providers—though Starlink was first and was approved with fewer initial conditions.",
+    "header_info": "5 providers authorized · 2 operational · 128 million Nigerians unconnected",
+    "key_finding": "Most advanced sovereignty model of all studied countries — yet hardware costs 4.5 months of minimum wage, excluding the majority",
+    "summary": "Nigeria's LEO story is defined by crisis and inequality. Over 19,000 terrestrial fiber cuts in early 2025 made satellite connectivity a strategic necessity rather than a planned transition. In 2026, the market transitioned from a Starlink monopoly toward a multi-constellation framework with five authorized providers (two operational — Starlink and Eutelsat OneWeb — and three more holding 7-year landing permits). Nigeria has also adopted the most advanced sovereignty protections of any studied country — mandating local data gateway landing, local partnerships, and a biometric NIN registration requirement for all Starlink users. Yet the hardware barrier remains extreme: at ₦318,000, a Starlink Mini kit costs 4.5 months of minimum-wage income. With 128 million Nigerians still unconnected and Amazon Leo targeting 400 Mbps to disrupt pricing, Nigeria simultaneously represents the best governance model and the deepest affordability crisis.",
+    "primary_driver": "Diversification"
+  }
+},
+{
+  "model": "observatory.country",
+  "pk": 6,
+  "fields": {
+    "slug": "ukraine",
+    "name": "Ukraine",
+    "active": true,
+    "iso_code": "UA",
+    "region": "Europe",
+    "report_date": "March 2026",
+    "risk": "moderate",
+    "providers_authorized": 3,
+    "providers_operational": 2,
+    "population": "40.2 million",
+    "card_title": "Wartime dependency on a single provider.",
+    "card_blurb": "Starlink was deployed within days of an invasion by Russia in 2022. Now, LEO satellites serve as the national connectivity backbone for military use—as well as for schools, hospitals, and homes.",
+    "header_info": "Population 40 million · 5 million+ Starlink users",
+    "key_finding": "100,000 military terminals dependent on a single foreign provider — geofencing restrictions have already constrained operations in occupied territories",
+    "summary": "Within days of a military invasion by Russia in 2022, Starlink was deployed under emergency authorization. Today, LEO satellites serve as the national connectivity backbone, with over 160,000 terminals across the country, approximately 100,000 of them military. The same terminals used for drone operations and to support military command-and-control also provide internet access to schools, hospitals, and civilian households. This dual-use function emerged from necessity—and Starlink now counts over <a href='https://www.globalbankingandfinance.com/veon-expects-customers-using-starlink-ukraine-double-year/' target='_blank'>5 million users</a>.<br/><br/>The high dependency on a single foreign operator owned by Space X has had consequences for regional access and military operations in an active war. There are a few other operational providers for military and government use. Now, Ukraine is investing in a sovereign satellite—UASAT LEO—planned for launch in October 2026 at an estimated cost of $634 million.",
+    "primary_driver": "National Defense"
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "country": 1,
+    "name": "Competition",
+    "risk": "high",
+    "text": "Brazil authorizes five LEO providers under the RGSat framework. Only Starlink currently offers internet services directly to consumers. OneWeb and Telesat serve enterprise and wholesale backhaul only. Amazon Leo (formerly Amazon Kuiper) has not yet launched. The market is practically monopolistic in the consumer segment. In 2023, Brazil’s Ministry of Education set a minimum internet speed for schools. Only Starlink could meet it, and that reinforces the lock-in. There are no LEO-specific consumer-rights instruments that govern exit costs or terminal portability. Starlink has 11,908 satellites authorized, giving it a footprint few rivals can match. Chinese company SpaceSail was authorised shortly after <a href='https://g1.globo.com/politica/noticia/2024/09/13/moraes-manda-transferir-r-182-milhoes-do-x-e-da-starlink-para-a-uniao-e-desbloqueia-contas-das-empresas.ghtml' target='_blank'>a very public confrontation</a> between Elon Musk and Brazil's Supreme Court in 2024, but is not yet operational."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 2,
+  "fields": {
+    "sort_order": 1,
+    "country": 1,
+    "name": "Affordability",
+    "risk": "moderate",
+    "text": "Monthly consumer subscription costs range from $37-82 a month while commercial plans range from $48-455. Costs are a barrier for the lowest income earners, since the cheapest plan would still account for approximately 12% of a minimum-wage worker's monthly income. Given the high number of subscribers reported in the country, this suggests uptake among middle and upper-income households. Starlink operates in the rural Amazon region through many partnerships with nonprofits, the private sector, and agreements with public authorities, as well as grassroots initiatives. It is common for antennas to be donated to Amazon riverside (Ribeirinho) schools and other communities"
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 3,
+  "fields": {
+    "sort_order": 2,
+    "country": 1,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Basic connectivity reaches 85% of urban and 74% of rural households in Brazil, but there are steep connectivity declines to 31% in the Southeast and 10–11% in the North and Northeast of the country, with stark divisions of access by income. In the absence of alternatives, Starlink has made real gains in the Amazon region (Amazônia Legal) specifically, reaching more than 90% of the region's municipalities. It reportedly serves health workers and schools in remote areas, including in Indigenous, Quilombola and Ribeirinho communities. Along with this access, there have been official pledges to build digital-literacy infrastructure and to establish community-controlled antenna management, reducing vulnerability to service interruptions from a single foreign operator. "
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 4,
+  "fields": {
+    "sort_order": 3,
+    "country": 1,
+    "name": "Governance",
+    "risk": "high",
+    "text": "In November 2021, Communications Minister Fábio Faria (Bolsonaro government) travelled to SpaceX's Texas headquarters ahead of any formal regulatory process. The following month, RGSat (Resolution 748/2021) established Brazil's LEO licensing framework, with a 10-day public comment window, with no provisions on data sovereignty, routing obligations, or digital governance. RGSat establishes a two-layer structure: Satellite Exploitation Rights for Orbital Operation (5 operators were authorized) and an SCM Broadband Licence for serving retail customers (Starlink only). There was limited civil society and community engagement. Anatel has since admitted that it was authorising first and properly assessing values later. Lobbying and direct communication has continued under the following administration (Lula government)."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 5,
+  "fields": {
+    "sort_order": 4,
+    "country": 1,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "In April 2025, Anatel issued a regulatory alert conceding that the framework under which it was approving that expansion was inadequate. It formally identified market concentration, space sustainability, and digital sovereignty as systematic gaps and referred them to two internal committees (C-INT and CEO) for Regulatory Impact Analysis, with a full report and proposed resolution deferred to the second semester of 2026. A number of concrete failures were listed. For instance, that there were no binding coverage obligations attached to the Starlink authorisation, and no service quality benchmarks, or public interest duties. There was also no oversight over terminal distribution, which led to use of Starlink terminals by illegal gold miners in Indigenous territories. Full authorisation conditions and technical annexes are not routinely published in machine-readable form, and the Ministry of Communications was found to have denied meetings with Starlink that its own later disclosures confirmed took place. Compliance obligations do exist. There is a public-calamity clause, spectrum coordination—and for retail operators, Anatel's quality rules and data-protection law. Enforcement has occurred more than once: an account freeze, antenna seizures in Yanomami territory, and a binding 2025 identity-verification agreement. Researchers characterize these as reactive 'quick-fixes' addressing symptoms rather than the governance gaps in the original 2021–2022 authorisation."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 6,
+  "fields": {
+    "sort_order": 0,
+    "country": 2,
+    "name": "Competition",
+    "risk": "low",
+    "text": "Starlink is Ukraine's dominant LEO provider by a margin with over 160,000 terminals nationwide (approximately 100,000 of them military). It functions as the national backbone. Eutelsat OneWeb, which is operational from early 2025 with German government funding, has fewer than 1,000 terminals. It only serves government and institutional users. A third channel, satellite services from Denmark via the European Defence Agency, covers a small number of military units, with no operator or scope publicly specified.<br/><br/>Ukraine is in active war, and the scale of Starlink's deployment reflects emergency speed and donor logistics. OneWeb entered through intergovernmental defence cooperation channels. It is not a retail competitor, it does not compete for civilian customers in a functioning market.<br/><br/>If launched in October 2026 as scheduled, UASAT LEO, Ukraine's first national satellite, would give Ukraine its first domestically controlled LEO capacity. But it will not resolve the immediate concentration problem."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 7,
+  "fields": {
+    "sort_order": 1,
+    "country": 2,
+    "name": "Affordability",
+    "risk": "moderate",
+    "text": "Hardware and subscription costs have been substantially absorbed outside any retail market through donor-funded terminals (Poland alone contributed nearly 30,000), a temporary customs and VAT exemption from December 2022 to mid-2023, and the citizen-funded \"People's Starlink\" movement. But for households and institutions outside these channels, pricing has been steep.<br/><br/>Hardware cost roughly $385 at launch in early 2022, then doubled to $600–700 by late 2022 and remained in that range through 2025. Monthly subscriptions started at around $100, dropped to $60 in August 2022, rose again to $75 by late 2022, and have since ranged between $50 and $95 depending on tier. Current plans range from $38/month for a 50GB Priority tier to $95/month for unlimited Roam, with the standard Residential plan at $75/month. Business and high-capacity tiers reach $440/month. Against an average monthly salary of around $800 and mobile internet costs of around $10, even entry-level plan is a significant expense. Some users must also go through intermediaries or resellers due to delivery, customs, and banking complications during wartime adding cost and reducing transparency.<br/><br/>The procurement problem runs deeper for public institutions. Ukrainian public bodies cannot pay SpaceX directly because Starlink requires international card transactions, which conflict with public finance and procurement rules. Budget-funded institutions route payments through intermediaries and complex contract structures instead — a workaround that Transparency International Ukraine has warned can obscure how subscription costs are classified in procurement documents, particularly under simplified wartime procedures."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 8,
+  "fields": {
+    "sort_order": 2,
+    "country": 2,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Before 2022, Ukraine had strong connectivity, over 90% 4G coverage across settlements and fast fixed broadband in urban areas. Russia's invasion damaged fiber routes, power systems, and mobile towers across the country, creating connectivity blackouts in areas that previously had reliable service.<br/><br/>LEO terminals serve two distinct functions. In cities, they operate as backup infrastructure during power outages and network disruptions. In frontline communities, such as schools, hospitals, rural areas where mobile networks fail outright, they are the primary connection. Restoring physical infrastructure in active combat zones is largely impractical. This makes satellite the only viable option.<br/><br/>The main access limitation is geofencing. Starlink is unavailable in Russian-occupied territories, including Crimea. Communities under occupation have no access regardless of hardware availability.<br/><br/>Affordability is also a constraint for civilian households outside donor and subsidy channels. Coverage does not necessarily mean it is economically accessible for everyone who needs it."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 9,
+  "fields": {
+    "sort_order": 3,
+    "country": 2,
+    "name": "Governance",
+    "risk": "high",
+    "text": "Ukraine's LEO governance is shaped by the same dual-use purpose. The terminals serve both military operations and civilian life. There is no regulatory framework built for either. Authorization proceeded under emergency conditions, and martial law has kept most of it unpublished ever since. This leaves civilian users with no oversight and military users with no formal accountability structure either.<br/><br/>Starlink's deployment began on February 26, 2022, with a tweet. Minister of Digital Transformation Mykhailo Fedorov publicly tagged Elon Musk requesting access; the first terminals arrived two days later. No formal decree preceded deployment. The National Commission for Communications Regulation issued the first authorization in April 2022, permitting use for critical infrastructure. A Cabinet of Ministers decree followed in December 2022, temporarily removing customs duties and VAT on satellite equipment imports.<br/><br/>No public consultation has been held on any LEO initiative. Decision-making sits within the Ministry of Digital Transformation, the Ministry of Defence, and international donor coordination structures. European alternatives, OneWeb and the Danish/EDA channel entered through intergovernmental and defence cooperation frameworks with even less public-facing transparency than Starlink."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 10,
+  "fields": {
+    "sort_order": 4,
+    "country": 2,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "Authorization terms for Starlink and the country's other satellite arrangements remain largely unpublished. Civil society organizations are actively calling for mandatory publication of authorizations and technical annexes within a fixed timeframe — a reform that has not yet materialized.<br/><br/>The one concrete, implemented compliance mechanism is the Ministry of Defence's 2026 terminal whitelist, registered through the DIIA e-government app. All Starlink terminals must be registered, including civilians at administrative service centers, businesses online, military through a separate secure channel. The purpose is to block Russian forces from using unauthorized terminals, rather than to enforce service standards or protect consumers. <br/><br/>Civilian users have no local regulatory channel for complaints. They rely on Starlink's own global support system, which is a private, extraterritorial mechanism with no Ukrainian accountability framework attached. There are no published quality-of-service standards, no cybersecurity audit requirements, and no coverage mandates specific to satellite operators.<br/><br/>Civil society has called for two reforms: mandatory publication of satellite authorizations and technical annexes within a fixed timeframe, and a structured requirement for resilience diversification across multiple providers. Neither has been adopted."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 11,
+  "fields": {
+    "sort_order": 0,
+    "country": 3,
+    "name": "Competition",
+    "risk": "low",
+    "text": "Starlink is Ukraine's dominant LEO provider by a margin with over 160,000 terminals nationwide (approximately 100,000 of them military). It functions as the national backbone. Eutelsat OneWeb, which is operational from early 2025 with German government funding, has fewer than 1,000 terminals. It only serves government and institutional users. A third channel, satellite services from Denmark via the European Defence Agency, covers a small number of military units, with no operator or scope publicly specified.<br/><br/>Ukraine is in active war, and the scale of Starlink's deployment reflects emergency speed and donor logistics. OneWeb entered through intergovernmental defence cooperation channels. It is not a retail competitor, it does not compete for civilian customers in a functioning market.<br/><br/>If launched in October 2026 as scheduled, UASAT LEO, Ukraine's first national satellite, would give Ukraine its first domestically controlled LEO capacity. But it will not resolve the immediate concentration problem."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 12,
+  "fields": {
+    "sort_order": 1,
+    "country": 3,
+    "name": "Affordability",
+    "risk": "moderate",
+    "text": "Hardware and subscription costs have been substantially absorbed outside any retail market through donor-funded terminals (Poland alone contributed nearly 30,000), a temporary customs and VAT exemption from December 2022 to mid-2023, and the citizen-funded \"People's Starlink\" movement. But for households and institutions outside these channels, pricing has been steep.<br/><br/>Hardware cost roughly $385 at launch in early 2022, then doubled to $600–700 by late 2022 and remained in that range through 2025. Monthly subscriptions started at around $100, dropped to $60 in August 2022, rose again to $75 by late 2022, and have since ranged between $50 and $95 depending on tier. Current plans range from $38/month for a 50GB Priority tier to $95/month for unlimited Roam, with the standard Residential plan at $75/month. Business and high-capacity tiers reach $440/month. Against an average monthly salary of around $800 and mobile internet costs of around $10, even entry-level plan is a significant expense. Some users must also go through intermediaries or resellers due to delivery, customs, and banking complications during wartime adding cost and reducing transparency.<br/><br/>The procurement problem runs deeper for public institutions. Ukrainian public bodies cannot pay SpaceX directly because Starlink requires international card transactions, which conflict with public finance and procurement rules. Budget-funded institutions route payments through intermediaries and complex contract structures instead — a workaround that Transparency International Ukraine has warned can obscure how subscription costs are classified in procurement documents, particularly under simplified wartime procedures."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 13,
+  "fields": {
+    "sort_order": 2,
+    "country": 3,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Before 2022, Ukraine had strong connectivity, over 90% 4G coverage across settlements and fast fixed broadband in urban areas. Russia's invasion damaged fiber routes, power systems, and mobile towers across the country, creating connectivity blackouts in areas that previously had reliable service.<br/><br/>LEO terminals serve two distinct functions. In cities, they operate as backup infrastructure during power outages and network disruptions. In frontline communities, such as schools, hospitals, rural areas where mobile networks fail outright, they are the primary connection. Restoring physical infrastructure in active combat zones is largely impractical. This makes satellite the only viable option.<br/><br/>The main access limitation is geofencing. Starlink is unavailable in Russian-occupied territories, including Crimea. Communities under occupation have no access regardless of hardware availability.<br/><br/>Affordability is also a constraint for civilian households outside donor and subsidy channels. Coverage does not necessarily mean it is economically accessible for everyone who needs it."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 14,
+  "fields": {
+    "sort_order": 3,
+    "country": 3,
+    "name": "Governance",
+    "risk": "high",
+    "text": "Ukraine's LEO governance is shaped by the same dual-use purpose. The terminals serve both military operations and civilian life. There is no regulatory framework built for either. Authorization proceeded under emergency conditions, and martial law has kept most of it unpublished ever since. This leaves civilian users with no oversight and military users with no formal accountability structure either.<br/><br/>Starlink's deployment began on February 26, 2022, with a tweet. Minister of Digital Transformation Mykhailo Fedorov publicly tagged Elon Musk requesting access; the first terminals arrived two days later. No formal decree preceded deployment. The National Commission for Communications Regulation issued the first authorization in April 2022, permitting use for critical infrastructure. A Cabinet of Ministers decree followed in December 2022, temporarily removing customs duties and VAT on satellite equipment imports.<br/><br/>No public consultation has been held on any LEO initiative. Decision-making sits within the Ministry of Digital Transformation, the Ministry of Defence, and international donor coordination structures. European alternatives, OneWeb and the Danish/EDA channel entered through intergovernmental and defence cooperation frameworks with even less public-facing transparency than Starlink."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 15,
+  "fields": {
+    "sort_order": 4,
+    "country": 3,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "Authorization terms for Starlink and the country's other satellite arrangements remain largely unpublished. Civil society organizations are actively calling for mandatory publication of authorizations and technical annexes within a fixed timeframe — a reform that has not yet materialized.<br/><br/>The one concrete, implemented compliance mechanism is the Ministry of Defence's 2026 terminal whitelist, registered through the DIIA e-government app. All Starlink terminals must be registered, including civilians at administrative service centers, businesses online, military through a separate secure channel. The purpose is to block Russian forces from using unauthorized terminals, rather than to enforce service standards or protect consumers. <br/><br/>Civilian users have no local regulatory channel for complaints. They rely on Starlink's own global support system, which is a private, extraterritorial mechanism with no Ukrainian accountability framework attached. There are no published quality-of-service standards, no cybersecurity audit requirements, and no coverage mandates specific to satellite operators.<br/><br/>Civil society has called for two reforms: mandatory publication of satellite authorizations and technical annexes within a fixed timeframe, and a structured requirement for resilience diversification across multiple providers. Neither has been adopted."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 16,
+  "fields": {
+    "sort_order": 0,
+    "country": 4,
+    "name": "Competition",
+    "risk": "low",
+    "text": "Starlink is Ukraine's dominant LEO provider by a margin with over 160,000 terminals nationwide (approximately 100,000 of them military). It functions as the national backbone. Eutelsat OneWeb, which is operational from early 2025 with German government funding, has fewer than 1,000 terminals. It only serves government and institutional users. A third channel, satellite services from Denmark via the European Defence Agency, covers a small number of military units, with no operator or scope publicly specified.<br/><br/>Ukraine is in active war, and the scale of Starlink's deployment reflects emergency speed and donor logistics. OneWeb entered through intergovernmental defence cooperation channels. It is not a retail competitor, it does not compete for civilian customers in a functioning market.<br/><br/>If launched in October 2026 as scheduled, UASAT LEO, Ukraine's first national satellite, would give Ukraine its first domestically controlled LEO capacity. But it will not resolve the immediate concentration problem."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 17,
+  "fields": {
+    "sort_order": 1,
+    "country": 4,
+    "name": "Affordability",
+    "risk": "moderate",
+    "text": "Hardware and subscription costs have been substantially absorbed outside any retail market through donor-funded terminals (Poland alone contributed nearly 30,000), a temporary customs and VAT exemption from December 2022 to mid-2023, and the citizen-funded \"People's Starlink\" movement. But for households and institutions outside these channels, pricing has been steep.<br/><br/>Hardware cost roughly $385 at launch in early 2022, then doubled to $600–700 by late 2022 and remained in that range through 2025. Monthly subscriptions started at around $100, dropped to $60 in August 2022, rose again to $75 by late 2022, and have since ranged between $50 and $95 depending on tier. Current plans range from $38/month for a 50GB Priority tier to $95/month for unlimited Roam, with the standard Residential plan at $75/month. Business and high-capacity tiers reach $440/month. Against an average monthly salary of around $800 and mobile internet costs of around $10, even entry-level plan is a significant expense. Some users must also go through intermediaries or resellers due to delivery, customs, and banking complications during wartime adding cost and reducing transparency.<br/><br/>The procurement problem runs deeper for public institutions. Ukrainian public bodies cannot pay SpaceX directly because Starlink requires international card transactions, which conflict with public finance and procurement rules. Budget-funded institutions route payments through intermediaries and complex contract structures instead — a workaround that Transparency International Ukraine has warned can obscure how subscription costs are classified in procurement documents, particularly under simplified wartime procedures."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 18,
+  "fields": {
+    "sort_order": 2,
+    "country": 4,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Before 2022, Ukraine had strong connectivity, over 90% 4G coverage across settlements and fast fixed broadband in urban areas. Russia's invasion damaged fiber routes, power systems, and mobile towers across the country, creating connectivity blackouts in areas that previously had reliable service.<br/><br/>LEO terminals serve two distinct functions. In cities, they operate as backup infrastructure during power outages and network disruptions. In frontline communities, such as schools, hospitals, rural areas where mobile networks fail outright, they are the primary connection. Restoring physical infrastructure in active combat zones is largely impractical. This makes satellite the only viable option.<br/><br/>The main access limitation is geofencing. Starlink is unavailable in Russian-occupied territories, including Crimea. Communities under occupation have no access regardless of hardware availability.<br/><br/>Affordability is also a constraint for civilian households outside donor and subsidy channels. Coverage does not necessarily mean it is economically accessible for everyone who needs it."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 19,
+  "fields": {
+    "sort_order": 3,
+    "country": 4,
+    "name": "Governance",
+    "risk": "high",
+    "text": "Ukraine's LEO governance is shaped by the same dual-use purpose. The terminals serve both military operations and civilian life. There is no regulatory framework built for either. Authorization proceeded under emergency conditions, and martial law has kept most of it unpublished ever since. This leaves civilian users with no oversight and military users with no formal accountability structure either.<br/><br/>Starlink's deployment began on February 26, 2022, with a tweet. Minister of Digital Transformation Mykhailo Fedorov publicly tagged Elon Musk requesting access; the first terminals arrived two days later. No formal decree preceded deployment. The National Commission for Communications Regulation issued the first authorization in April 2022, permitting use for critical infrastructure. A Cabinet of Ministers decree followed in December 2022, temporarily removing customs duties and VAT on satellite equipment imports.<br/><br/>No public consultation has been held on any LEO initiative. Decision-making sits within the Ministry of Digital Transformation, the Ministry of Defence, and international donor coordination structures. European alternatives, OneWeb and the Danish/EDA channel entered through intergovernmental and defence cooperation frameworks with even less public-facing transparency than Starlink."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 20,
+  "fields": {
+    "sort_order": 4,
+    "country": 4,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "Authorization terms for Starlink and the country's other satellite arrangements remain largely unpublished. Civil society organizations are actively calling for mandatory publication of authorizations and technical annexes within a fixed timeframe — a reform that has not yet materialized.<br/><br/>The one concrete, implemented compliance mechanism is the Ministry of Defence's 2026 terminal whitelist, registered through the DIIA e-government app. All Starlink terminals must be registered, including civilians at administrative service centers, businesses online, military through a separate secure channel. The purpose is to block Russian forces from using unauthorized terminals, rather than to enforce service standards or protect consumers. <br/><br/>Civilian users have no local regulatory channel for complaints. They rely on Starlink's own global support system, which is a private, extraterritorial mechanism with no Ukrainian accountability framework attached. There are no published quality-of-service standards, no cybersecurity audit requirements, and no coverage mandates specific to satellite operators.<br/><br/>Civil society has called for two reforms: mandatory publication of satellite authorizations and technical annexes within a fixed timeframe, and a structured requirement for resilience diversification across multiple providers. Neither has been adopted."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 21,
+  "fields": {
+    "sort_order": 0,
+    "country": 5,
+    "name": "Competition",
+    "risk": "low",
+    "text": "Starlink is Ukraine's dominant LEO provider by a margin with over 160,000 terminals nationwide (approximately 100,000 of them military). It functions as the national backbone. Eutelsat OneWeb, which is operational from early 2025 with German government funding, has fewer than 1,000 terminals. It only serves government and institutional users. A third channel, satellite services from Denmark via the European Defence Agency, covers a small number of military units, with no operator or scope publicly specified.<br/><br/>Ukraine is in active war, and the scale of Starlink's deployment reflects emergency speed and donor logistics. OneWeb entered through intergovernmental defence cooperation channels. It is not a retail competitor, it does not compete for civilian customers in a functioning market.<br/><br/>If launched in October 2026 as scheduled, UASAT LEO, Ukraine's first national satellite, would give Ukraine its first domestically controlled LEO capacity. But it will not resolve the immediate concentration problem."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 22,
+  "fields": {
+    "sort_order": 1,
+    "country": 5,
+    "name": "Affordability",
+    "risk": "moderate",
+    "text": "Hardware and subscription costs have been substantially absorbed outside any retail market through donor-funded terminals (Poland alone contributed nearly 30,000), a temporary customs and VAT exemption from December 2022 to mid-2023, and the citizen-funded \"People's Starlink\" movement. But for households and institutions outside these channels, pricing has been steep.<br/><br/>Hardware cost roughly $385 at launch in early 2022, then doubled to $600–700 by late 2022 and remained in that range through 2025. Monthly subscriptions started at around $100, dropped to $60 in August 2022, rose again to $75 by late 2022, and have since ranged between $50 and $95 depending on tier. Current plans range from $38/month for a 50GB Priority tier to $95/month for unlimited Roam, with the standard Residential plan at $75/month. Business and high-capacity tiers reach $440/month. Against an average monthly salary of around $800 and mobile internet costs of around $10, even entry-level plan is a significant expense. Some users must also go through intermediaries or resellers due to delivery, customs, and banking complications during wartime adding cost and reducing transparency.<br/><br/>The procurement problem runs deeper for public institutions. Ukrainian public bodies cannot pay SpaceX directly because Starlink requires international card transactions, which conflict with public finance and procurement rules. Budget-funded institutions route payments through intermediaries and complex contract structures instead — a workaround that Transparency International Ukraine has warned can obscure how subscription costs are classified in procurement documents, particularly under simplified wartime procedures."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 23,
+  "fields": {
+    "sort_order": 2,
+    "country": 5,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Before 2022, Ukraine had strong connectivity, over 90% 4G coverage across settlements and fast fixed broadband in urban areas. Russia's invasion damaged fiber routes, power systems, and mobile towers across the country, creating connectivity blackouts in areas that previously had reliable service.<br/><br/>LEO terminals serve two distinct functions. In cities, they operate as backup infrastructure during power outages and network disruptions. In frontline communities, such as schools, hospitals, rural areas where mobile networks fail outright, they are the primary connection. Restoring physical infrastructure in active combat zones is largely impractical. This makes satellite the only viable option.<br/><br/>The main access limitation is geofencing. Starlink is unavailable in Russian-occupied territories, including Crimea. Communities under occupation have no access regardless of hardware availability.<br/><br/>Affordability is also a constraint for civilian households outside donor and subsidy channels. Coverage does not necessarily mean it is economically accessible for everyone who needs it."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 24,
+  "fields": {
+    "sort_order": 3,
+    "country": 5,
+    "name": "Governance",
+    "risk": "high",
+    "text": "Ukraine's LEO governance is shaped by the same dual-use purpose. The terminals serve both military operations and civilian life. There is no regulatory framework built for either. Authorization proceeded under emergency conditions, and martial law has kept most of it unpublished ever since. This leaves civilian users with no oversight and military users with no formal accountability structure either.<br/><br/>Starlink's deployment began on February 26, 2022, with a tweet. Minister of Digital Transformation Mykhailo Fedorov publicly tagged Elon Musk requesting access; the first terminals arrived two days later. No formal decree preceded deployment. The National Commission for Communications Regulation issued the first authorization in April 2022, permitting use for critical infrastructure. A Cabinet of Ministers decree followed in December 2022, temporarily removing customs duties and VAT on satellite equipment imports.<br/><br/>No public consultation has been held on any LEO initiative. Decision-making sits within the Ministry of Digital Transformation, the Ministry of Defence, and international donor coordination structures. European alternatives, OneWeb and the Danish/EDA channel entered through intergovernmental and defence cooperation frameworks with even less public-facing transparency than Starlink."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 25,
+  "fields": {
+    "sort_order": 4,
+    "country": 5,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "Authorization terms for Starlink and the country's other satellite arrangements remain largely unpublished. Civil society organizations are actively calling for mandatory publication of authorizations and technical annexes within a fixed timeframe — a reform that has not yet materialized.<br/><br/>The one concrete, implemented compliance mechanism is the Ministry of Defence's 2026 terminal whitelist, registered through the DIIA e-government app. All Starlink terminals must be registered, including civilians at administrative service centers, businesses online, military through a separate secure channel. The purpose is to block Russian forces from using unauthorized terminals, rather than to enforce service standards or protect consumers. <br/><br/>Civilian users have no local regulatory channel for complaints. They rely on Starlink's own global support system, which is a private, extraterritorial mechanism with no Ukrainian accountability framework attached. There are no published quality-of-service standards, no cybersecurity audit requirements, and no coverage mandates specific to satellite operators.<br/><br/>Civil society has called for two reforms: mandatory publication of satellite authorizations and technical annexes within a fixed timeframe, and a structured requirement for resilience diversification across multiple providers. Neither has been adopted."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 26,
+  "fields": {
+    "sort_order": 0,
+    "country": 6,
+    "name": "Competition",
+    "risk": "high",
+    "text": "Starlink is Ukraine's dominant LEO provider by a large margin with over 160,000 terminals (approximately 100,000 of them military). Eutelsat OneWeb has been operational in Ukraine for government use only since 2025 with backing from Germany through intergovernmental defence cooperation channels. Denmark has also provided satellite services via the European Defence Agency for a small (unspecified) number of military units. To address concerns of sovereignty, Ukraine is investing in its own satellite—UASAT LEO—expected to launch in October 2026 at an estimated cost of $634 million (operated by Stetman)."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 27,
+  "fields": {
+    "sort_order": 1,
+    "country": 6,
+    "name": "Affordability",
+    "risk": "low",
+    "text": "Hardware and subscription costs for Starlink connections have been substantially absorbed through donor-funded terminals (Poland alone contributed nearly 30,000), a temporary customs and VAT exemption (2022-2023), and a citizen-funded \"People's Starlink\" movement. But for anyone outside these channels, the price is steep. Hardware costs were in the range of $600–700 through 2025. Subscription price dropped in July 2026 to $25-95 /month depending on speed and data amounts. It is around 2.5 times the cost of a typical mobile internet connection and still unaffordable for many."
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 28,
+  "fields": {
+    "sort_order": 2,
+    "country": 6,
+    "name": "Accessibility",
+    "risk": "low",
+    "text": "Ukraine once had strong connectivity, with over 90% 4G coverage across settlements and fast fixed broadband in urban areas. Russia's invasion in 2022 damaged fiber routes, power systems, and mobile towers across the country, creating connectivity blackouts in areas that previously had reliable service. In cities, LEO terminals operate as backup infrastructure during power outages and network disruptions. In frontline communities, such as schools, hospitals, rural areas—where mobile networks fail—they are the primary connection points. In Russian-occupied territories, including Crimea, Starlink blocks access with geofencing. Communities under occupation have zero access. "
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 29,
+  "fields": {
+    "sort_order": 3,
+    "country": 6,
+    "name": "Governance",
+    "risk": "moderate",
+    "text": "Given the wartime context, governance of LEO satellites has operated mostly outside normal regulatory channels. The terminals serve both military operations and civilian life. There is no regulatory framework built for either. Authorisation began under emergency conditions, and martial law has kept most of it unpublished ever since. This leaves civilian users with no oversight and military users with no formal accountability structure either. Starlink's deployment began on February 26, 2022, with a public <a href='https://t.me/zedigital/1713' target='_blank'>tweet</a> from Ukraine’s Minister of Digital Transformation to Elon Musk, Starlink’s owner. Since February 2026, <a href='https://mod.gov.ua/news/yak-projti-verifikacziyu-starlink-minoboroni-vidpovidaye-na-najposhirenishi-zapitannya Show less' target='_blank'>all Starlink terminals must be registered</a> with the government to prevent misuse by Russian forces. "
+  }
+},
+{
+  "model": "observatory.researchdimension",
+  "pk": 30,
+  "fields": {
+    "sort_order": 4,
+    "country": 6,
+    "name": "Accountability",
+    "risk": "high",
+    "text": "Authorization terms for Starlink and the country's other satellite arrangements remain largely unpublished. Civil society organizations are actively calling for mandatory publication of authorizations and technical annexes within a fixed timeframe — a reform that has not yet materialized. Civilian users have no local regulatory channel for complaints. They rely on Starlink's own global support system, which is a private, extraterritorial mechanism with no Ukrainian accountability framework attached. There are no published quality-of-service standards, no cybersecurity audit requirements, and no coverage mandates specific to satellite operators. Civil society has also called for a structured requirement for resilience diversification across multiple providers."
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 1,
+    "name": "Operational",
+    "info": "Starlink<br/>OneWeb (enterprise only)"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 2,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 1,
+    "name": "Authorised",
+    "info": "Telesat<br/>Amazon Leo (via Sky)<br/>SpaceSail"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 3,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 2,
+    "name": "Starlink subscription",
+    "info": "$37-82 / per month"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 4,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 2,
+    "name": "Starlink hardware cost",
+    "info": "$100–470"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 5,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 3,
+    "name": "Population",
+    "info": "213 million"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 6,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 3,
+    "name": "Starlink users",
+    "info": "~ 1 million"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 7,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 4,
+    "name": "Primary driver",
+    "info": "Executive Lobbying"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 8,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 4,
+    "name": "Process",
+    "info": "Signs of improvement"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 9,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 26,
+    "name": "Operational",
+    "info": "Starlink<br/>OneWeb (military+government)"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 10,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 26,
+    "name": "Authorised",
+    "info": "UASAT LEO (planned)"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 11,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 27,
+    "name": "Starlink subscription",
+    "info": "$25-95 / per month"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 12,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 27,
+    "name": "Starlink hardware cost",
+    "info": "$600-700"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 13,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 28,
+    "name": "Population",
+    "info": "40 million"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 14,
+  "fields": {
+    "sort_order": 1,
+    "dimension": 28,
+    "name": "Starlink users",
+    "info": "5 million +"
+  }
+},
+{
+  "model": "observatory.researchindicator",
+  "pk": 15,
+  "fields": {
+    "sort_order": 0,
+    "dimension": 29,
+    "name": "",
+    "info": "No public consultations have been held on any LEO initiative."
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 77,
+  "fields": {
+    "sort_order": 0,
+    "country": 1,
+    "provider": "Starlink",
+    "info": "First formal step",
+    "date": "2021-11",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 78,
+  "fields": {
+    "sort_order": 1,
+    "country": 1,
+    "provider": "Starlink",
+    "info": "Authorization",
+    "date": "2022-02-07",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 79,
+  "fields": {
+    "sort_order": 2,
+    "country": 1,
+    "provider": "Starlink",
+    "info": "Service launch",
+    "date": "2022-05",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 80,
+  "fields": {
+    "sort_order": 3,
+    "country": 1,
+    "provider": "Telesat",
+    "info": "Authorization",
+    "date": "2022-05-19",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 81,
+  "fields": {
+    "sort_order": 4,
+    "country": 1,
+    "provider": "OneWeb",
+    "info": "Authorization",
+    "date": "2022-07-15",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 82,
+  "fields": {
+    "sort_order": 5,
+    "country": 1,
+    "provider": "OneWeb",
+    "info": "Service launch",
+    "date": "2023-03",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 83,
+  "fields": {
+    "sort_order": 6,
+    "country": 1,
+    "provider": "Amazon Leo",
+    "info": "Authorization",
+    "date": "2022-12",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 84,
+  "fields": {
+    "sort_order": 7,
+    "country": 1,
+    "provider": "SpaceSail",
+    "info": "Authorization",
+    "date": "2026-02-12",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 85,
+  "fields": {
+    "sort_order": 8,
+    "country": 1,
+    "provider": "SpaceSail",
+    "info": "Service launch (expected)",
+    "date": "2026-Q4",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 86,
+  "fields": {
+    "sort_order": 0,
+    "country": 2,
+    "provider": "Starlink",
+    "info": "First mention",
+    "date": "2023-11-17",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 87,
+  "fields": {
+    "sort_order": 1,
+    "country": 2,
+    "provider": "Starlink",
+    "info": "Authorization",
+    "date": "2023-11-29",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 88,
+  "fields": {
+    "sort_order": 2,
+    "country": 2,
+    "provider": "Starlink",
+    "info": "Service launch",
+    "date": "2024-05-20",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 89,
+  "fields": {
+    "sort_order": 0,
+    "country": 3,
+    "provider": "Starlink",
+    "info": "First public lobbying",
+    "date": "2020",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 90,
+  "fields": {
+    "sort_order": 1,
+    "country": 3,
+    "provider": "Starlink",
+    "info": "First landing rights",
+    "date": "2022-06",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 91,
+  "fields": {
+    "sort_order": 2,
+    "country": 3,
+    "provider": "Starlink",
+    "info": "Authorization (VSAT/ISP)",
+    "date": "2024-05",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 92,
+  "fields": {
+    "sort_order": 3,
+    "country": 3,
+    "provider": "Starlink",
+    "info": "Service launch",
+    "date": "2024-05-19",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 93,
+  "fields": {
+    "sort_order": 0,
+    "country": 4,
+    "provider": "Starlink",
+    "info": "First public mention",
+    "date": "2023-07-15",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 94,
+  "fields": {
+    "sort_order": 1,
+    "country": 4,
+    "provider": "Starlink",
+    "info": "Authorization",
+    "date": "2023-07-25",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 95,
+  "fields": {
+    "sort_order": 0,
+    "country": 5,
+    "provider": "Starlink",
+    "info": "First mention",
+    "date": "2021-05",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 96,
+  "fields": {
+    "sort_order": 1,
+    "country": 5,
+    "provider": "Starlink",
+    "info": "ISP & Gateway licenses",
+    "date": "2022-05",
+    "category": "licensing"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 97,
+  "fields": {
+    "sort_order": 2,
+    "country": 5,
+    "provider": "Starlink",
+    "info": "Authorization",
+    "date": "2022-12",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 98,
+  "fields": {
+    "sort_order": 3,
+    "country": 5,
+    "provider": "Starlink",
+    "info": "Service launch",
+    "date": "2023-01-31",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 99,
+  "fields": {
+    "sort_order": 4,
+    "country": 5,
+    "provider": "OneWeb",
+    "info": "First mention",
+    "date": "2023-05",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 100,
+  "fields": {
+    "sort_order": 5,
+    "country": 5,
+    "provider": "OneWeb",
+    "info": "Authorization (NIGCOMSAT deal)",
+    "date": "2025-01",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 101,
+  "fields": {
+    "sort_order": 6,
+    "country": 5,
+    "provider": "OneWeb",
+    "info": "Service launch",
+    "date": "2025-06",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 102,
+  "fields": {
+    "sort_order": 7,
+    "country": 5,
+    "provider": "Amazon Leo",
+    "info": "Authorization",
+    "date": "2026-01",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 103,
+  "fields": {
+    "sort_order": 8,
+    "country": 5,
+    "provider": "Amazon Leo",
+    "info": "Service launch",
+    "date": "2026-02-28",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 104,
+  "fields": {
+    "sort_order": 0,
+    "country": 6,
+    "provider": "Starlink",
+    "info": "First mention",
+    "date": "2022-02-26",
+    "category": "other"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 105,
+  "fields": {
+    "sort_order": 1,
+    "country": 6,
+    "provider": "Starlink",
+    "info": "Service launch",
+    "date": "2022-02-28",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 106,
+  "fields": {
+    "sort_order": 2,
+    "country": 6,
+    "provider": "Starlink",
+    "info": "Authorised for all purposes",
+    "date": "2022-04",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 107,
+  "fields": {
+    "sort_order": 3,
+    "country": 6,
+    "provider": "OneWeb",
+    "info": "Service launch mention",
+    "date": "2025-01",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 108,
+  "fields": {
+    "sort_order": 4,
+    "country": 6,
+    "provider": "OneWeb",
+    "info": "Authorization",
+    "date": "2025-06",
+    "category": "authorization"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 109,
+  "fields": {
+    "sort_order": 5,
+    "country": 6,
+    "provider": "OneWeb",
+    "info": "Service launch",
+    "date": "2025-09",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 110,
+  "fields": {
+    "sort_order": 6,
+    "country": 6,
+    "provider": "UASAT LEO",
+    "info": "First mention",
+    "date": "2025-01",
+    "category": "contact"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 111,
+  "fields": {
+    "sort_order": 7,
+    "country": 6,
+    "provider": "UASAT LEO",
+    "info": "ITU registration ",
+    "date": "2025-02",
+    "category": "other"
+  }
+},
+{
+  "model": "observatory.timelineentry",
+  "pk": 112,
+  "fields": {
+    "sort_order": 8,
+    "country": 6,
+    "provider": "UASAT LEO",
+    "info": "Service launch (target date)",
+    "date": "2026-10",
+    "category": "launch"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "code": "FJ",
+    "name": "Fiji"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 2,
+  "fields": {
+    "sort_order": 1,
+    "code": "TZ",
+    "name": "Tanzania"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 3,
+  "fields": {
+    "sort_order": 2,
+    "code": "EH",
+    "name": "W. Sahara"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 4,
+  "fields": {
+    "sort_order": 3,
+    "code": "CA",
+    "name": "Canada"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 5,
+  "fields": {
+    "sort_order": 4,
+    "code": "US",
+    "name": "United States of America"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 6,
+  "fields": {
+    "sort_order": 5,
+    "code": "KZ",
+    "name": "Kazakhstan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 7,
+  "fields": {
+    "sort_order": 6,
+    "code": "UZ",
+    "name": "Uzbekistan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 8,
+  "fields": {
+    "sort_order": 7,
+    "code": "PG",
+    "name": "Papua New Guinea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 9,
+  "fields": {
+    "sort_order": 8,
+    "code": "ID",
+    "name": "Indonesia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 10,
+  "fields": {
+    "sort_order": 9,
+    "code": "AR",
+    "name": "Argentina"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 11,
+  "fields": {
+    "sort_order": 10,
+    "code": "CL",
+    "name": "Chile"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 12,
+  "fields": {
+    "sort_order": 11,
+    "code": "CD",
+    "name": "Dem. Rep. Congo"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 13,
+  "fields": {
+    "sort_order": 12,
+    "code": "SO",
+    "name": "Somalia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 14,
+  "fields": {
+    "sort_order": 13,
+    "code": "KE",
+    "name": "Kenya"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 15,
+  "fields": {
+    "sort_order": 14,
+    "code": "SD",
+    "name": "Sudan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 16,
+  "fields": {
+    "sort_order": 15,
+    "code": "TD",
+    "name": "Chad"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 17,
+  "fields": {
+    "sort_order": 16,
+    "code": "HT",
+    "name": "Haiti"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 18,
+  "fields": {
+    "sort_order": 17,
+    "code": "DO",
+    "name": "Dominican Rep."
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 19,
+  "fields": {
+    "sort_order": 18,
+    "code": "RU",
+    "name": "Russia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 20,
+  "fields": {
+    "sort_order": 19,
+    "code": "BS",
+    "name": "Bahamas"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 21,
+  "fields": {
+    "sort_order": 20,
+    "code": "FK",
+    "name": "Falkland Is."
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 22,
+  "fields": {
+    "sort_order": 21,
+    "code": "NO",
+    "name": "Norway"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 23,
+  "fields": {
+    "sort_order": 22,
+    "code": "GL",
+    "name": "Greenland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 24,
+  "fields": {
+    "sort_order": 23,
+    "code": "TF",
+    "name": "Fr. S. Antarctic Lands"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 25,
+  "fields": {
+    "sort_order": 24,
+    "code": "TL",
+    "name": "Timor-Leste"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 26,
+  "fields": {
+    "sort_order": 25,
+    "code": "ZA",
+    "name": "South Africa"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 27,
+  "fields": {
+    "sort_order": 26,
+    "code": "LS",
+    "name": "Lesotho"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 28,
+  "fields": {
+    "sort_order": 27,
+    "code": "MX",
+    "name": "Mexico"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 29,
+  "fields": {
+    "sort_order": 28,
+    "code": "UY",
+    "name": "Uruguay"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 30,
+  "fields": {
+    "sort_order": 29,
+    "code": "BR",
+    "name": "Brazil"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 31,
+  "fields": {
+    "sort_order": 30,
+    "code": "BO",
+    "name": "Bolivia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 32,
+  "fields": {
+    "sort_order": 31,
+    "code": "PE",
+    "name": "Peru"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 33,
+  "fields": {
+    "sort_order": 32,
+    "code": "CO",
+    "name": "Colombia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 34,
+  "fields": {
+    "sort_order": 33,
+    "code": "PA",
+    "name": "Panama"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 35,
+  "fields": {
+    "sort_order": 34,
+    "code": "CR",
+    "name": "Costa Rica"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 36,
+  "fields": {
+    "sort_order": 35,
+    "code": "NI",
+    "name": "Nicaragua"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 37,
+  "fields": {
+    "sort_order": 36,
+    "code": "HN",
+    "name": "Honduras"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 38,
+  "fields": {
+    "sort_order": 37,
+    "code": "SV",
+    "name": "El Salvador"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 39,
+  "fields": {
+    "sort_order": 38,
+    "code": "GT",
+    "name": "Guatemala"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 40,
+  "fields": {
+    "sort_order": 39,
+    "code": "BZ",
+    "name": "Belize"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 41,
+  "fields": {
+    "sort_order": 40,
+    "code": "VE",
+    "name": "Venezuela"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 42,
+  "fields": {
+    "sort_order": 41,
+    "code": "GY",
+    "name": "Guyana"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 43,
+  "fields": {
+    "sort_order": 42,
+    "code": "SR",
+    "name": "Suriname"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 44,
+  "fields": {
+    "sort_order": 43,
+    "code": "FR",
+    "name": "France"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 45,
+  "fields": {
+    "sort_order": 44,
+    "code": "EC",
+    "name": "Ecuador"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 46,
+  "fields": {
+    "sort_order": 45,
+    "code": "PR",
+    "name": "Puerto Rico"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 47,
+  "fields": {
+    "sort_order": 46,
+    "code": "JM",
+    "name": "Jamaica"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 48,
+  "fields": {
+    "sort_order": 47,
+    "code": "CU",
+    "name": "Cuba"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 49,
+  "fields": {
+    "sort_order": 48,
+    "code": "ZW",
+    "name": "Zimbabwe"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 50,
+  "fields": {
+    "sort_order": 49,
+    "code": "BW",
+    "name": "Botswana"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 51,
+  "fields": {
+    "sort_order": 50,
+    "code": "NA",
+    "name": "Namibia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 52,
+  "fields": {
+    "sort_order": 51,
+    "code": "SN",
+    "name": "Senegal"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 53,
+  "fields": {
+    "sort_order": 52,
+    "code": "ML",
+    "name": "Mali"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 54,
+  "fields": {
+    "sort_order": 53,
+    "code": "MR",
+    "name": "Mauritania"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 55,
+  "fields": {
+    "sort_order": 54,
+    "code": "BJ",
+    "name": "Benin"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 56,
+  "fields": {
+    "sort_order": 55,
+    "code": "NE",
+    "name": "Niger"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 57,
+  "fields": {
+    "sort_order": 56,
+    "code": "NG",
+    "name": "Nigeria"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 58,
+  "fields": {
+    "sort_order": 57,
+    "code": "CM",
+    "name": "Cameroon"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 59,
+  "fields": {
+    "sort_order": 58,
+    "code": "TG",
+    "name": "Togo"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 60,
+  "fields": {
+    "sort_order": 59,
+    "code": "GH",
+    "name": "Ghana"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 61,
+  "fields": {
+    "sort_order": 60,
+    "code": "CI",
+    "name": "Côte d'Ivoire"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 62,
+  "fields": {
+    "sort_order": 61,
+    "code": "GN",
+    "name": "Guinea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 63,
+  "fields": {
+    "sort_order": 62,
+    "code": "GW",
+    "name": "Guinea-Bissau"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 64,
+  "fields": {
+    "sort_order": 63,
+    "code": "LR",
+    "name": "Liberia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 65,
+  "fields": {
+    "sort_order": 64,
+    "code": "SL",
+    "name": "Sierra Leone"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 66,
+  "fields": {
+    "sort_order": 65,
+    "code": "BF",
+    "name": "Burkina Faso"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 67,
+  "fields": {
+    "sort_order": 66,
+    "code": "CF",
+    "name": "Central African Rep."
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 68,
+  "fields": {
+    "sort_order": 67,
+    "code": "CG",
+    "name": "Congo"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 69,
+  "fields": {
+    "sort_order": 68,
+    "code": "GA",
+    "name": "Gabon"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 70,
+  "fields": {
+    "sort_order": 69,
+    "code": "GQ",
+    "name": "Eq. Guinea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 71,
+  "fields": {
+    "sort_order": 70,
+    "code": "ZM",
+    "name": "Zambia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 72,
+  "fields": {
+    "sort_order": 71,
+    "code": "MW",
+    "name": "Malawi"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 73,
+  "fields": {
+    "sort_order": 72,
+    "code": "MZ",
+    "name": "Mozambique"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 74,
+  "fields": {
+    "sort_order": 73,
+    "code": "SZ",
+    "name": "eSwatini"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 75,
+  "fields": {
+    "sort_order": 74,
+    "code": "AO",
+    "name": "Angola"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 76,
+  "fields": {
+    "sort_order": 75,
+    "code": "BI",
+    "name": "Burundi"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 77,
+  "fields": {
+    "sort_order": 76,
+    "code": "IL",
+    "name": "Israel"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 78,
+  "fields": {
+    "sort_order": 77,
+    "code": "LB",
+    "name": "Lebanon"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 79,
+  "fields": {
+    "sort_order": 78,
+    "code": "MG",
+    "name": "Madagascar"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 80,
+  "fields": {
+    "sort_order": 79,
+    "code": "PS",
+    "name": "Palestine"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 81,
+  "fields": {
+    "sort_order": 80,
+    "code": "GM",
+    "name": "Gambia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 82,
+  "fields": {
+    "sort_order": 81,
+    "code": "TN",
+    "name": "Tunisia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 83,
+  "fields": {
+    "sort_order": 82,
+    "code": "DZ",
+    "name": "Algeria"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 84,
+  "fields": {
+    "sort_order": 83,
+    "code": "JO",
+    "name": "Jordan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 85,
+  "fields": {
+    "sort_order": 84,
+    "code": "AE",
+    "name": "United Arab Emirates"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 86,
+  "fields": {
+    "sort_order": 85,
+    "code": "QA",
+    "name": "Qatar"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 87,
+  "fields": {
+    "sort_order": 86,
+    "code": "KW",
+    "name": "Kuwait"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 88,
+  "fields": {
+    "sort_order": 87,
+    "code": "IQ",
+    "name": "Iraq"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 89,
+  "fields": {
+    "sort_order": 88,
+    "code": "OM",
+    "name": "Oman"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 90,
+  "fields": {
+    "sort_order": 89,
+    "code": "VU",
+    "name": "Vanuatu"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 91,
+  "fields": {
+    "sort_order": 90,
+    "code": "KH",
+    "name": "Cambodia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 92,
+  "fields": {
+    "sort_order": 91,
+    "code": "TH",
+    "name": "Thailand"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 93,
+  "fields": {
+    "sort_order": 92,
+    "code": "LA",
+    "name": "Laos"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 94,
+  "fields": {
+    "sort_order": 93,
+    "code": "MM",
+    "name": "Myanmar"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 95,
+  "fields": {
+    "sort_order": 94,
+    "code": "VN",
+    "name": "Vietnam"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 96,
+  "fields": {
+    "sort_order": 95,
+    "code": "KP",
+    "name": "North Korea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 97,
+  "fields": {
+    "sort_order": 96,
+    "code": "KR",
+    "name": "South Korea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 98,
+  "fields": {
+    "sort_order": 97,
+    "code": "MN",
+    "name": "Mongolia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 99,
+  "fields": {
+    "sort_order": 98,
+    "code": "IN",
+    "name": "India"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 100,
+  "fields": {
+    "sort_order": 99,
+    "code": "BD",
+    "name": "Bangladesh"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 101,
+  "fields": {
+    "sort_order": 100,
+    "code": "BT",
+    "name": "Bhutan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 102,
+  "fields": {
+    "sort_order": 101,
+    "code": "NP",
+    "name": "Nepal"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 103,
+  "fields": {
+    "sort_order": 102,
+    "code": "PK",
+    "name": "Pakistan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 104,
+  "fields": {
+    "sort_order": 103,
+    "code": "AF",
+    "name": "Afghanistan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 105,
+  "fields": {
+    "sort_order": 104,
+    "code": "TJ",
+    "name": "Tajikistan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 106,
+  "fields": {
+    "sort_order": 105,
+    "code": "KG",
+    "name": "Kyrgyzstan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 107,
+  "fields": {
+    "sort_order": 106,
+    "code": "TM",
+    "name": "Turkmenistan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 108,
+  "fields": {
+    "sort_order": 107,
+    "code": "IR",
+    "name": "Iran"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 109,
+  "fields": {
+    "sort_order": 108,
+    "code": "SY",
+    "name": "Syria"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 110,
+  "fields": {
+    "sort_order": 109,
+    "code": "AM",
+    "name": "Armenia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 111,
+  "fields": {
+    "sort_order": 110,
+    "code": "SE",
+    "name": "Sweden"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 112,
+  "fields": {
+    "sort_order": 111,
+    "code": "BY",
+    "name": "Belarus"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 113,
+  "fields": {
+    "sort_order": 112,
+    "code": "UA",
+    "name": "Ukraine"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 114,
+  "fields": {
+    "sort_order": 113,
+    "code": "PL",
+    "name": "Poland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 115,
+  "fields": {
+    "sort_order": 114,
+    "code": "AT",
+    "name": "Austria"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 116,
+  "fields": {
+    "sort_order": 115,
+    "code": "HU",
+    "name": "Hungary"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 117,
+  "fields": {
+    "sort_order": 116,
+    "code": "MD",
+    "name": "Moldova"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 118,
+  "fields": {
+    "sort_order": 117,
+    "code": "RO",
+    "name": "Romania"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 119,
+  "fields": {
+    "sort_order": 118,
+    "code": "LT",
+    "name": "Lithuania"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 120,
+  "fields": {
+    "sort_order": 119,
+    "code": "LV",
+    "name": "Latvia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 121,
+  "fields": {
+    "sort_order": 120,
+    "code": "EE",
+    "name": "Estonia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 122,
+  "fields": {
+    "sort_order": 121,
+    "code": "DE",
+    "name": "Germany"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 123,
+  "fields": {
+    "sort_order": 122,
+    "code": "BG",
+    "name": "Bulgaria"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 124,
+  "fields": {
+    "sort_order": 123,
+    "code": "GR",
+    "name": "Greece"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 125,
+  "fields": {
+    "sort_order": 124,
+    "code": "TR",
+    "name": "Turkey"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 126,
+  "fields": {
+    "sort_order": 125,
+    "code": "AL",
+    "name": "Albania"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 127,
+  "fields": {
+    "sort_order": 126,
+    "code": "HR",
+    "name": "Croatia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 128,
+  "fields": {
+    "sort_order": 127,
+    "code": "CH",
+    "name": "Switzerland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 129,
+  "fields": {
+    "sort_order": 128,
+    "code": "LU",
+    "name": "Luxembourg"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 130,
+  "fields": {
+    "sort_order": 129,
+    "code": "BE",
+    "name": "Belgium"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 131,
+  "fields": {
+    "sort_order": 130,
+    "code": "NL",
+    "name": "Netherlands"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 132,
+  "fields": {
+    "sort_order": 131,
+    "code": "PT",
+    "name": "Portugal"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 133,
+  "fields": {
+    "sort_order": 132,
+    "code": "ES",
+    "name": "Spain"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 134,
+  "fields": {
+    "sort_order": 133,
+    "code": "IE",
+    "name": "Ireland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 135,
+  "fields": {
+    "sort_order": 134,
+    "code": "NC",
+    "name": "New Caledonia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 136,
+  "fields": {
+    "sort_order": 135,
+    "code": "SB",
+    "name": "Solomon Is."
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 137,
+  "fields": {
+    "sort_order": 136,
+    "code": "NZ",
+    "name": "New Zealand"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 138,
+  "fields": {
+    "sort_order": 137,
+    "code": "AU",
+    "name": "Australia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 139,
+  "fields": {
+    "sort_order": 138,
+    "code": "LK",
+    "name": "Sri Lanka"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 140,
+  "fields": {
+    "sort_order": 139,
+    "code": "CN",
+    "name": "China"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 141,
+  "fields": {
+    "sort_order": 140,
+    "code": "TW",
+    "name": "Taiwan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 142,
+  "fields": {
+    "sort_order": 141,
+    "code": "IT",
+    "name": "Italy"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 143,
+  "fields": {
+    "sort_order": 142,
+    "code": "DK",
+    "name": "Denmark"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 144,
+  "fields": {
+    "sort_order": 143,
+    "code": "GB",
+    "name": "United Kingdom"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 145,
+  "fields": {
+    "sort_order": 144,
+    "code": "IS",
+    "name": "Iceland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 146,
+  "fields": {
+    "sort_order": 145,
+    "code": "AZ",
+    "name": "Azerbaijan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 147,
+  "fields": {
+    "sort_order": 146,
+    "code": "GE",
+    "name": "Georgia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 148,
+  "fields": {
+    "sort_order": 147,
+    "code": "PH",
+    "name": "Philippines"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 149,
+  "fields": {
+    "sort_order": 148,
+    "code": "MY",
+    "name": "Malaysia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 150,
+  "fields": {
+    "sort_order": 149,
+    "code": "BN",
+    "name": "Brunei"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 151,
+  "fields": {
+    "sort_order": 150,
+    "code": "SI",
+    "name": "Slovenia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 152,
+  "fields": {
+    "sort_order": 151,
+    "code": "FI",
+    "name": "Finland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 153,
+  "fields": {
+    "sort_order": 152,
+    "code": "SK",
+    "name": "Slovakia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 154,
+  "fields": {
+    "sort_order": 153,
+    "code": "CZ",
+    "name": "Czechia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 155,
+  "fields": {
+    "sort_order": 154,
+    "code": "ER",
+    "name": "Eritrea"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 156,
+  "fields": {
+    "sort_order": 155,
+    "code": "JP",
+    "name": "Japan"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 157,
+  "fields": {
+    "sort_order": 156,
+    "code": "PY",
+    "name": "Paraguay"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 158,
+  "fields": {
+    "sort_order": 157,
+    "code": "YE",
+    "name": "Yemen"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 159,
+  "fields": {
+    "sort_order": 158,
+    "code": "SA",
+    "name": "Saudi Arabia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 160,
+  "fields": {
+    "sort_order": 159,
+    "code": "N. Cyprus",
+    "name": "N. Cyprus"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 161,
+  "fields": {
+    "sort_order": 160,
+    "code": "CY",
+    "name": "Cyprus"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 162,
+  "fields": {
+    "sort_order": 161,
+    "code": "MA",
+    "name": "Morocco"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 163,
+  "fields": {
+    "sort_order": 162,
+    "code": "EG",
+    "name": "Egypt"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 164,
+  "fields": {
+    "sort_order": 163,
+    "code": "LY",
+    "name": "Libya"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 165,
+  "fields": {
+    "sort_order": 164,
+    "code": "ET",
+    "name": "Ethiopia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 166,
+  "fields": {
+    "sort_order": 165,
+    "code": "DJ",
+    "name": "Djibouti"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 167,
+  "fields": {
+    "sort_order": 166,
+    "code": "Somaliland",
+    "name": "Somaliland"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 168,
+  "fields": {
+    "sort_order": 167,
+    "code": "UG",
+    "name": "Uganda"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 169,
+  "fields": {
+    "sort_order": 168,
+    "code": "RW",
+    "name": "Rwanda"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 170,
+  "fields": {
+    "sort_order": 169,
+    "code": "BA",
+    "name": "Bosnia and Herz."
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 171,
+  "fields": {
+    "sort_order": 170,
+    "code": "MK",
+    "name": "Macedonia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 172,
+  "fields": {
+    "sort_order": 171,
+    "code": "RS",
+    "name": "Serbia"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 173,
+  "fields": {
+    "sort_order": 172,
+    "code": "ME",
+    "name": "Montenegro"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 174,
+  "fields": {
+    "sort_order": 173,
+    "code": "Kosovo",
+    "name": "Kosovo"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 175,
+  "fields": {
+    "sort_order": 174,
+    "code": "TT",
+    "name": "Trinidad and Tobago"
+  }
+},
+{
+  "model": "observatory.mapcountryname",
+  "pk": 176,
+  "fields": {
+    "sort_order": 175,
+    "code": "SS",
+    "name": "S. Sudan"
+  }
+}
+]

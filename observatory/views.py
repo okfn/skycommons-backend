@@ -16,7 +16,7 @@ def content_countries(request):
 def country_detail(request, slug):
     country = get_object_or_404(
         Country.objects.prefetch_related(
-            "timeline_entries", "market_providers", "red_flags", "policy_levers"
+            "research_dimensions__indicators", "timeline_entries"
         ),
         slug=slug,
     )

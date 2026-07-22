@@ -20,23 +20,12 @@ class RiskLevel(models.TextChoices):
     HIGH = "high"
 
 
-class Severity(models.TextChoices):
-    MODERATE = "moderate"
-    HIGH = "high"
-    CRITICAL = "critical"
-
-
-class ProviderStatus(models.TextChoices):
-    PROSPECTIVE = "prospective"
-    AUTHORIZED = "authorized"
-    OPERATIONAL = "operational"
-
-
 class TimelineCategory(models.TextChoices):
     CONTACT = "contact"
     LICENSING = "licensing"
     AUTHORIZATION = "authorization"
     LAUNCH = "launch"
+    OTHER = "other"
 
 
 @register_snippet
@@ -106,14 +95,20 @@ class Country(ClusterableModel):
         unique=True, help_text="URL id used by the frontend (e.g. 'brazil')."
     )
     name = models.CharField(max_length=100)
+    active = models.BooleanField(
+        default=True, help_text="Shown as active on the frontend."
+    )
     iso_code = models.CharField(max_length=2, help_text="ISO 3166-1 alpha-2 (e.g. BR).")
     region = models.CharField(max_length=50)
     report_date = models.CharField(
         max_length=50, help_text="Displayed as-is (e.g. 'March 2026')."
     )
-    risk_level = models.CharField(max_length=10, choices=RiskLevel.choices)
+    risk = models.CharField(max_length=10, choices=RiskLevel.choices)
     providers_authorized = models.PositiveIntegerField()
     providers_operational = models.PositiveIntegerField()
+    population = models.CharField(
+        max_length=50, help_text="Displayed as-is (e.g. '213.7 million')."
+    )
 
     card_title = models.CharField(max_length=255)
     card_blurb = models.TextField()
@@ -121,54 +116,24 @@ class Country(ClusterableModel):
         help_text="One-line stats shown under the country header."
     )
     key_finding = models.TextField()
-
-    # comparative_analysis: four fixed dimensions, label + description each
-    primary_driver_label = models.CharField(max_length=100)
-    primary_driver_description = models.TextField()
-    local_presence_label = models.CharField(max_length=100)
-    local_presence_description = models.TextField()
-    competition_label = models.CharField(max_length=100)
-    competition_description = models.TextField()
-    key_gap_label = models.CharField(max_length=100)
-    key_gap_description = models.TextField()
-
-    quote = models.TextField(blank=True, null=True)
-    quote_attribution = models.CharField(blank=True, null=True, max_length=255)
     summary = models.TextField()
-
-    # market_structure (providers list lives in MarketProvider)
-    licensing_pathway = models.CharField(
-        max_length=100, help_text="Short label (e.g. 'Fast-tracked', 'Emergency')."
+    primary_driver = models.CharField(
+        max_length=100, help_text="Short label (e.g. 'Executive Lobbying')."
     )
-    licensing_pathway_note = models.TextField()
-    uso_rollout = models.TextField(
-        blank=True,
-        help_text="Universal service obligation rollout status, if any "
-        "(only present for some countries).",
-    )
-
-    # governance_scorecard
-    qos_obligations = models.BooleanField(default=False)
-    outage_reporting_required = models.BooleanField(default=False)
-    local_data_landing_mandate = models.BooleanField(default=False)
-    local_partner_requirement = models.BooleanField(default=False)
-    foreign_ownership_exception = models.BooleanField(default=False)
-    public_consultation = models.BooleanField(default=False)
-    cybersecurity_audit = models.BooleanField(default=False)
-    scorecard_summary_note = models.TextField()
 
     panels = [
         MultiFieldPanel(
             [
                 FieldRowPanel([FieldPanel("name"), FieldPanel("slug")]),
                 FieldRowPanel([FieldPanel("iso_code"), FieldPanel("region")]),
-                FieldRowPanel([FieldPanel("report_date"), FieldPanel("risk_level")]),
+                FieldRowPanel([FieldPanel("report_date"), FieldPanel("risk")]),
                 FieldRowPanel(
                     [
                         FieldPanel("providers_authorized"),
                         FieldPanel("providers_operational"),
                     ]
                 ),
+                FieldRowPanel([FieldPanel("population"), FieldPanel("active")]),
             ],
             heading="Identity",
         ),
@@ -179,49 +144,12 @@ class Country(ClusterableModel):
                 FieldPanel("header_info"),
                 FieldPanel("key_finding"),
                 FieldPanel("summary"),
-                FieldPanel("quote"),
-                FieldPanel("quote_attribution"),
+                FieldPanel("primary_driver"),
             ],
             heading="Texts",
         ),
-        MultiFieldPanel(
-            [
-                FieldPanel("primary_driver_label"),
-                FieldPanel("primary_driver_description"),
-                FieldPanel("local_presence_label"),
-                FieldPanel("local_presence_description"),
-                FieldPanel("competition_label"),
-                FieldPanel("competition_description"),
-                FieldPanel("key_gap_label"),
-                FieldPanel("key_gap_description"),
-            ],
-            heading="Comparative analysis",
-        ),
-        MultiFieldPanel(
-            [
-                FieldPanel("licensing_pathway"),
-                FieldPanel("licensing_pathway_note"),
-                FieldPanel("uso_rollout"),
-                InlinePanel("market_providers", label="Providers"),
-            ],
-            heading="Market structure",
-        ),
-        MultiFieldPanel(
-            [
-                FieldPanel("qos_obligations"),
-                FieldPanel("outage_reporting_required"),
-                FieldPanel("local_data_landing_mandate"),
-                FieldPanel("local_partner_requirement"),
-                FieldPanel("foreign_ownership_exception"),
-                FieldPanel("public_consultation"),
-                FieldPanel("cybersecurity_audit"),
-                FieldPanel("scorecard_summary_note"),
-            ],
-            heading="Governance scorecard",
-        ),
+        InlinePanel("research_dimensions", heading="Research", label="Dimension"),
         InlinePanel("timeline_entries", heading="Timeline", label="Event"),
-        InlinePanel("red_flags", heading="Red flags", label="Red flag"),
-        InlinePanel("policy_levers", heading="Policy levers", label="Policy lever"),
     ]
 
     class Meta:
@@ -230,6 +158,44 @@ class Country(ClusterableModel):
 
     def __str__(self):
         return self.name
+
+
+class ResearchDimension(Orderable, ClusterableModel):
+    """One scored research dimension of a country dossier (Competition,
+    Governance, Accountability, Affordability, Accessibility)."""
+
+    country = ParentalKey(
+        Country, on_delete=models.CASCADE, related_name="research_dimensions"
+    )
+    name = models.CharField(max_length=100)
+    risk = models.CharField(max_length=10, choices=RiskLevel.choices)
+    text = models.TextField()
+
+    panels = [
+        FieldRowPanel([FieldPanel("name"), FieldPanel("risk")]),
+        FieldPanel("text"),
+        InlinePanel("indicators", label="Indicator"),
+    ]
+
+    def __str__(self):
+        return f"{self.name} ({self.risk})"
+
+
+class ResearchIndicator(Orderable):
+    dimension = ParentalKey(
+        ResearchDimension, on_delete=models.CASCADE, related_name="indicators"
+    )
+    name = models.CharField(
+        blank=True, max_length=100, help_text="Optional label shown before the value."
+    )
+    info = models.TextField(
+        help_text="Short value. Inline HTML (<br/>) is allowed for line breaks."
+    )
+
+    panels = [FieldPanel("name"), FieldPanel("info")]
+
+    def __str__(self):
+        return f"{self.name}: {self.info[:40]}"
 
 
 class TimelineEntry(Orderable):
@@ -248,51 +214,6 @@ class TimelineEntry(Orderable):
 
     def __str__(self):
         return f"{self.date} {self.provider}: {self.info}"
-
-
-class MarketProvider(Orderable):
-    country = ParentalKey(
-        Country, on_delete=models.CASCADE, related_name="market_providers"
-    )
-    name = models.CharField(max_length=100)
-    local_entity = models.CharField(
-        blank=True,
-        null=True,
-        max_length=255,
-        help_text="Local subsidiary/partner, if any.",
-    )
-    status = models.CharField(max_length=20, choices=ProviderStatus.choices)
-
-    panels = [
-        FieldRowPanel([FieldPanel("name"), FieldPanel("status")]),
-        FieldPanel("local_entity"),
-    ]
-
-    def __str__(self):
-        return f"{self.name} ({self.status})"
-
-
-class RedFlag(Orderable):
-    country = ParentalKey(Country, on_delete=models.CASCADE, related_name="red_flags")
-    severity = models.CharField(max_length=10, choices=Severity.choices)
-    text = models.TextField()
-
-    panels = [FieldPanel("severity"), FieldPanel("text")]
-
-    def __str__(self):
-        return f"[{self.severity}] {self.text[:60]}"
-
-
-class PolicyLever(Orderable):
-    country = ParentalKey(
-        Country, on_delete=models.CASCADE, related_name="policy_levers"
-    )
-    text = models.TextField()
-
-    panels = [FieldPanel("text")]
-
-    def __str__(self):
-        return self.text[:60]
 
 
 @register_snippet
