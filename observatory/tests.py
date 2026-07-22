@@ -114,6 +114,16 @@ class FixtureTests(TestCase):
         brazil = Country.objects.get(slug="brazil")
         self.assertEqual(brazil.research_dimensions.count(), 5)
 
+    def test_bootstrap_only_loads_when_empty(self):
+        from .models import Country
+
+        call_command("bootstrap_data", verbosity=0)
+        self.assertEqual(Country.objects.count(), 6)
+        # editor change must survive a second bootstrap run
+        Country.objects.filter(slug="brazil").update(name="Edited")
+        call_command("bootstrap_data", verbosity=0)
+        self.assertEqual(Country.objects.get(slug="brazil").name, "Edited")
+
 
 class WagtailApiTests(TestCase):
     """The standard Wagtail API v2 endpoints are mounted at /api/v2/."""

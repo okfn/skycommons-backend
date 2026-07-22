@@ -36,3 +36,11 @@ jobs:
 
       - name: Run tests
         run: uv run python manage.py test
+
+      - name: Production settings sanity check
+        env:
+          DJANGO_SETTINGS_MODULE: skycommons.settings.production
+          SECRET_KEY: ci-only
+          ALLOWED_HOSTS: ci.example.org
+          POSTGRES_PASSWORD: ci-only
+        run: uv run python manage.py check

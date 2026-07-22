@@ -226,7 +226,12 @@ class MapCountryName(models.Model):
     sort_order = models.PositiveIntegerField(
         default=0, help_text="Preserves the original file order."
     )
-    code = models.CharField(unique=True, max_length=8)
+    code = models.CharField(
+        unique=True,
+        max_length=32,
+        help_text="ISO 3166-1 alpha-2 code, or a territory name when no ISO "
+        "code exists (e.g. 'Somaliland').",
+    )
     name = models.CharField(max_length=100)
 
     panels = [FieldPanel("code"), FieldPanel("name")]
