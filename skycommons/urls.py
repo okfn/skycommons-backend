@@ -13,6 +13,9 @@ urlpatterns = [
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
+    # Frontend compatibility layer: same URLs/formats as the static files
+    # the SvelteKit app consumes today (see observatory/urls.py).
+    path("", include("observatory.urls")),
 ]
 
 
