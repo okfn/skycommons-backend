@@ -1,21 +1,14 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block body_class %}template-homepage{% endblock %}
 
-{% block extra_css %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
-{% endblock extra_css %}
-
 {% block content %}
-
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-{% include 'home/welcome_page.html' %}
-
+<main style="font-family: system-ui, sans-serif; max-width: 40rem; margin: 20vh auto 0; padding: 0 1rem; text-align: center;">
+    <h1>SkyCommons backend</h1>
+    <p>
+        Content backend for the
+        <a href="{{ frontend_url }}">SkyCommons Observatory</a>.
+    </p>
+    <p><a href="/admin/">Editors: log in</a></p>
+</main>
 {% endblock content %}

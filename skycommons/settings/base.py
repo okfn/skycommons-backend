@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import os
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
@@ -157,6 +158,10 @@ STORAGES = {
 # Django sets a maximum of 1000 fields per form by default, but particularly complex page models
 # can exceed this limit within Wagtail's page editor.
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000
+
+
+# Public site this backend feeds (linked from the backend home page)
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "https://skycommons.okfn.org/")
 
 
 # Wagtail settings
