@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+CLAUDE.md
+TODO.md
+
+# Django / Wagtail
+db.sqlite3
+db.sqlite3-journal
+/static/
+/media/
+*.log
+
+# Local settings / secrets
+.env
+.env.*
+skycommons/settings/local.py
+
+# Editor / OS noise
+.idea/
+.vscode/
+*.swp
+.DS_Store
