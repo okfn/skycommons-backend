@@ -1,3 +1,5 @@
+from django.test import override_settings
+
 from home.models import HomePage
 
 from wagtail.models import Page, Site
@@ -40,3 +42,15 @@ class HomeTests(WagtailPageTestCase):
     def test_homepage_template_used(self):
         response = self.client.get(self.homepage.url)
         self.assertTemplateUsed(response, "home/home_page.html")
+
+    @override_settings(FRONTEND_URL="https://skycommons.okfn.org/")
+    def test_homepage_links_to_frontend(self):
+        response = self.client.get(self.homepage.url)
+        self.assertContains(response, "SkyCommons backend")
+        self.assertContains(response, 'href="https://skycommons.okfn.org/"')
+        self.assertContains(response, 'href="/admin/"')
+
+    @override_settings(FRONTEND_URL="https://staging.example.org/")
+    def test_frontend_url_is_configurable(self):
+        response = self.client.get(self.homepage.url)
+        self.assertContains(response, 'href="https://staging.example.org/"')

@@ -1,0 +1,38 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sky-commons-backend
+    steps:
+      - name: Check out backend
+        uses: actions/checkout@v4
+        with:
+          path: sky-commons-backend
+
+      # Sibling checkout of the static site, mirroring the local layout.
+      # The contract tests compare the compat API against its JSON files;
+      # without it they self-skip and only the rest of the suite runs.
+      - name: Check out static site (contract test data)
+        uses: actions/checkout@v4
+        with:
+          repository: okfn/skycommons
+          path: sky-commons
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Run tests
+        run: uv run python manage.py test
